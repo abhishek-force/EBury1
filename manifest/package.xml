@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ExchangeRateCalloutHandler</members>
+        <members>HttpCalloutHandler</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ForeignExchangeTrade__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>ForeignExchangeTrade__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>ForeignExchangeTrade__c-Foreign Exchange Trade Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Currency</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <version>53.0</version>
+</Package>

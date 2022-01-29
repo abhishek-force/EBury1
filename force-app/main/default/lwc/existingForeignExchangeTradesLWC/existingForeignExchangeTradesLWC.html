@@ -1,0 +1,28 @@
+<template>
+    <template if:false={showTradeCreationPage}>
+        <div>
+            <div class="slds-p-around_x-small">
+                <lightning-card title="Booked Trades"></lightning-card>
+            </div>
+
+            <div class="slds-grid slds-wrap">
+                <div class = "slds-col slds-size_12-of-12">
+                    <div class="slds-float_right">
+                        <lightning-button variant="brand-outline" label="New Trade" title="Create new trade with details" onclick={handleClick} class="slds-m-right_x-small"></lightning-button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-p-around_x-small">
+                <template if:true={fetchedTradeRecords}>
+                    <lightning-datatable data={fetchedTradeRecords} columns={columns} key-field="id" hide-checkbox-column="true"></lightning-datatable>
+                </template>
+            </div>
+        </div>
+    </template>
+    <template if:true={showTradeCreationPage}>
+        <c-new-foreign-exchange-trade-l-w-c onnavigateback={handleClick}></c-new-foreign-exchange-trade-l-w-c>
+    </template>
+    <!--template if:false={fetchedTradeRecords}>
+    </template-->
+</template>

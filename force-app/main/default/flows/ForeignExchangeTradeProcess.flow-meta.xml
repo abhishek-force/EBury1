@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>postTarget</name>
+            <value>
+                <stringValue>Trade Reviewers</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>textJson</name>
+            <value>
+                <stringValue>{&quot;mentions&quot;:[{&quot;name&quot;:&quot;Trade Reviewers&quot;,&quot;id&quot;:&quot;0F91F000000AIilSAG&quot;}],&quot;message&quot;:&quot;@[0F91F000000AIilSAG] \nA new trade has been created with the following data:\nSell Currency: {![ForeignExchangeTrade__c].SellCurrency__c}\nSell Amount: {![ForeignExchangeTrade__c].SellAmount__c}\nBuy Currency: {![ForeignExchangeTrade__c].BuyCurrency__c}\nBuy Amount: {![ForeignExchangeTrade__c].BuyAmount__c}\nRate: {![ForeignExchangeTrade__c].Rate__c}\nBooked Date: {![ForeignExchangeTrade__c].DateBooked__c}\n\nLink to the trade: {![ForeignExchangeTrade__c].DomainURL__c}{![ForeignExchangeTrade__c].Id}&quot;}</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Create Post</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>@[0F91F000000AIilSAG] 
+A new trade has been created with the following data:
+Sell Currency: {!myVariable_current.SellCurrency__c}
+Sell Amount: {!myVariable_current.SellAmount__c}
+Buy Currency: {!myVariable_current.BuyCurrency__c}
+Buy Amount: {!myVariable_current.BuyAmount__c}
+Rate: {!myVariable_current.Rate__c}
+Booked Date: {!myVariable_current.DateBooked__c}
+
+Link to the trade: {!myVariable_current.DomainURL__c}{!myVariable_current.Id}</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+            <value>
+                <stringValue>GROUP</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <stringValue>0F91F000000AIilSAG</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Process Chatter</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>true</expression>
+    </formulas>
+    <interviewLabel>ForeignExchangeTradeProcess-5_InterviewLabel</interviewLabel>
+    <label>Foreign Exchange Trade Process</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>ForeignExchangeTrade__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onCreateOnly</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myDecision</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>ForeignExchangeTrade__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ForeignExchangeTrade__c</objectType>
+    </variables>
+</Flow>

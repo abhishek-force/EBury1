@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Trade Reviewers</name>
+    <queueMembers>
+        <users>
+            <user>test-e6bhdrq5xwtd@example.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ForeignExchangeTrade__c</sobjectType>
+    </queueSobject>
+</Queue>
