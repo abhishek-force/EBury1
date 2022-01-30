@@ -1,1 +1,0 @@
-        requestWrapperIntst.urlParamMap = paramMap;
