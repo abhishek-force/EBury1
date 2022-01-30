@@ -3,8 +3,7 @@
         <lightning-card title="New Trade">
             <div style="border-bottom:solid 1px"></div>
             <div class="slds-p-around_x-small">
-                <lightning-record-edit-form object-api-name="ForeignExchangeTrade__c" onsuccess={handleSuccess}>
-                    <lightning-messages></lightning-messages>
+                <lightning-record-edit-form object-api-name={FOREIGN_EXCHANGE_TRADE} onsuccess={handleSuccess}>
                     <div class="slds-grid slds-wrap slds-gutters">
 
                         <div class="slds-col slds-size_2-of-8">
@@ -28,17 +27,22 @@
                             <lightning-input-field field-name={BUY_AMOUNT} disabled value={buyAmount}> </lightning-input-field>
                         </div>
                     </div>
-
+                    <div class="slds-align_absolute-center slds-text-color_error">
+                        <template if:true={errorMessage}>{errorMessage}</template>
+                    </div>
                     <div class="slds-var-m-top_medium slds-align_absolute-center">
                         <div class="slds-grid slds-gutters">
                             <div class="slds-col slds-size_6-of-12">
-                                <lightning-button variant="brand" type="submit" label="Create"></lightning-button>
+                                <template if:true={enableCreateButton}>
+                                    <lightning-button variant="brand" type="submit" label="Create"></lightning-button>
+                                </template>
                             </div>
                             <div class="slds-col slds-size_7-of-12">
                                 <lightning-button variant="brand" label="Cancel" onclick={handleCancel}></lightning-button>
                             </div>
                         </div>
                     </div>
+
                 </lightning-record-edit-form>
             </div>
         </lightning-card>

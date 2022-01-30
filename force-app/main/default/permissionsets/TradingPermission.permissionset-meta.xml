@@ -5,7 +5,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>ForeignExchangeRateTradeController</apexClass>
+        <apexClass>ForeignExchangeTradeController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -33,6 +33,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>ForeignExchangeTrade__c.DomainURL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>ForeignExchangeTrade__c.Rate__c</field>
         <readable>true</readable>
@@ -43,7 +48,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>ForeignExchangeTrade__c.SellCurrency__c</field>
         <readable>true</readable>
     </fieldPermissions>

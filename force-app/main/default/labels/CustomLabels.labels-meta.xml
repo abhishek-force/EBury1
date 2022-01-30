@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ExchangeRateCalloutError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message for exchange rate callout</shortDescription>
+        <value>There is some issue while retrieving exchange rate. Please try after sometime or check with System Admin</value>
+    </labels>
+    <labels>
+        <fullName>ExchangeRateResponseHandlingError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message for exchange rate response handling</shortDescription>
+        <value>We are not able to fetch exchange rates. Please try after sometime or check with System Admin</value>
+    </labels>
+    <labels>
+        <fullName>FixerAPIEndPoint</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fixer API end point for exchange rate</shortDescription>
+        <value>http://data.fixer.io/api/latest</value>
+    </labels>
+    <labels>
+        <fullName>FixerAPIKey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fixer API Key</shortDescription>
+        <value>8932fca849fb1029c055bc6635746db7</value>
+    </labels>
+    <labels>
+        <fullName>UserFriendlyExchangeRateProcessingError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Friendly Exchange Rate Processing Error</shortDescription>
+        <value>There is an issue while retrieving exchange rate. Please try again or check with your System Admin</value>
+    </labels>
+</CustomLabels>

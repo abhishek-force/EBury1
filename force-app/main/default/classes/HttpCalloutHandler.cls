@@ -17,24 +17,24 @@ public class HttpCalloutHandler {
         HttpResponse hRes = new HttpResponse();
         
         hReq.setMethod(request.method);
+        endpointString = request.endPoint;
 
         if(String.isNotBlank(request.requestBody)){
             hReq.setBody(request.requestBody);
         }
         
-        endpointString = request.endPoint + '?';
-        
-        for(String key : request.urlParamMap.keySet()){
-            endpointString += key + '=' + request.urlParamMap.get(key) + '&';
+        if(request.urlParamMap != null && !request.urlParamMap.keySet().isEmpty()){
+            endpointString += '?';
+            
+            for(String key : request.urlParamMap.keySet()){
+                endpointString += key + '=' + request.urlParamMap.get(key) + '&';
+            }
         }
         
         endpointString = endpointString.removeEnd('&');
         hReq.setEndPoint(endpointString);
-        
-        System.debug(hReq);
         hRes = h.send(hReq);
         
-        System.debug('Response Debug' + hRes);
         return hRes;
     }
 

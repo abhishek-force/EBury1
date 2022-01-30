@@ -1,0 +1,4 @@
+1. Go to app launcher> Groups> New> 
+ Provide name 'Trade Reviewers' and access type 'Private' and save. Add any users for testing as needed.
+2. Setup> Process Builder> Clone process 'Foreign Exchange Trade Process'> Edit step 'Create Post' and search for the group  created in step #1 and then save it.
+3. Assing permission set 'Trading Permission' to the testing user.

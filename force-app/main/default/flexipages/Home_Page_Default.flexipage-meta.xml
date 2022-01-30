@@ -4,6 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>home:heroChart</componentName>
+                <identifier>home_heroChart</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -14,11 +15,13 @@
         <itemInstances>
             <componentInstance>
                 <componentName>home:eventContainer</componentName>
+                <identifier>home_eventContainer</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>home:recentRecordContainer</componentName>
+                <identifier>home_recentRecordContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -29,11 +32,13 @@
         <itemInstances>
             <componentInstance>
                 <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+                <identifier>runtime_sales_activities_todayTaskContainer</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>home:topDealsContainer</componentName>
+                <identifier>home_topDealsContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -48,6 +53,7 @@
                     <value>TO</value>
                 </componentInstanceProperties>
                 <componentName>forceChatter:exposedFeed</componentName>
+                <identifier>forceChatter_exposedFeed1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -57,11 +63,13 @@
                     <value>GLOBAL</value>
                 </componentInstanceProperties>
                 <componentName>forceChatter:publisher</componentName>
+                <identifier>forceChatter_publisher1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>home:assistant</componentName>
+                <identifier>home_assistant</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

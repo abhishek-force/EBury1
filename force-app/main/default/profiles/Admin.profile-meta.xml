@@ -6,11 +6,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>ForeignExchangeRateTradeController</apexClass>
+        <apexClass>ForeignExchangeTradeController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ForeignExchangeRateTradeControllerTest</apexClass>
+        <apexClass>ForeignExchangeTradeControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>

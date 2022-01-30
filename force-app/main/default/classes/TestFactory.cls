@@ -9,7 +9,7 @@ public class TestFactory {
      * Method to create and return instance of ForeignExchangeTrade__c object
      * 
      ********************************************************************************************/
-    public static ForeignExchangeTrade__c createForeignExchangeRateTrade() {
+    public static ForeignExchangeTrade__c createForeignExchangeTrade() {
         ForeignExchangeTrade__c inst = new ForeignExchangeTrade__c();
         inst.SellAmount__c = 100;
         inst.SellCurrency__c = 'EUR';

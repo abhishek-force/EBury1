@@ -1,12 +1,20 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "EBuryAssessment",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "name": "EBury1",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "53.0",
+    "packageAliases": {
+        "EBuryAssessment": "0Ho6S000000PAtpSAG",
+        "EBuryAssessment@0.1.0-2": "04t6S000000gpphQAA",
+        "EBuryAssessment@0.1.0-3": "04t6S000000gppmQAA"
     }
-  ],
-  "name": "EBury1",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
 }
